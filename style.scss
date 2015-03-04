@@ -1,20 +1,20 @@
 // Reset
-@import 'reset';
+@import 'scss/reset';
 
 // Global 
-@import 'global';
+@import 'scss/global';
 
 /* Custom, iPhone Retina */
-@import 'iphone_retina';
+@import 'scss/iphone_retina';
 
 /* Extra Small Devices, Phones */
-@import 'small_devices';
+@import 'scss/small_devices';
 
 /* Small Devices, Tablets */
-@import 'tablet';
+@import 'scss/tablet';
 
 /* Medium Devices, Desktops */
-@import 'desktop';
+@import 'scss/desktop';
 
 /* Large Devices, Wide Screens */
-@import 'wide_screen';
+@import 'scss/wide_screen';

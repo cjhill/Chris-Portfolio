@@ -1,0 +1,123 @@
+/* ==========================================================================
+Variables
+========================================================================== */
+$black: #000;
+$lightblue: #50BEC8;
+$gray: #666;
+$lightgray: #ddd;
+
+/* ==========================================================================
+Mixins and Extends
+========================================================================== */
+
+.align-center {
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.align-bottom {
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.justify-content {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+}
+
+.justify-end {
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "museo-sans",sans-serif;
+}
+
+/* ==========================================================================
+Headings and Paragraphs
+========================================================================== */
+
+p,
+.jumbotron p {
+    line-height: 36px;
+    font-size: 1.5em;
+    color: $gray;
+}
+
+h1.page-title,
+h1.main-head {
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* ==========================================================================
+NAVIGATION
+========================================================================== */
+
+nav {
+    background: transparent;
+    .container {
+        height: 100%;
+        display: flex;
+        @extend .align-center;
+        .row {
+            width: 100%;
+            .two {
+                display: flex;
+                @extend .justify-end;
+                ul {
+                    li {
+                        display: inline-block;
+                        a {
+                            color: $lightblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+
+.jumbotron {
+    padding: 0;
+    background: transparent;
+    .container {
+        height: 100%;
+        display: flex;
+        @extend .align-bottom;
+    }
+}
+
+/* ==========================================================================
+GALLERY
+========================================================================== */
+
+#gallery {
+    
+}

@@ -27,11 +27,18 @@ table {
   border-spacing: 0; }
 
 /* ==========================================================================
+Variables
+========================================================================== */
+/* ==========================================================================
 Mixins and Extends
 ========================================================================== */
-.algin-center {
+.align-center, nav .container {
   -ms-align-items: center;
   align-items: center; }
+
+.align-bottom, .jumbotron .container {
+  -ms-align-items: flex-end;
+  align-items: flex-end; }
 
 .justify-content {
   -webkit-justify-content: center;
@@ -39,6 +46,13 @@ Mixins and Extends
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center; }
+
+.justify-end, nav .container .row .two {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end; }
 
 *,
 *:before,
@@ -53,12 +67,95 @@ Mixins and Extends
 
 html,
 body {
-  height: 100%; }
+  height: 100%;
+  font-family: "museo-sans",sans-serif; }
 
+/* ==========================================================================
+Headings and Paragraphs
+========================================================================== */
+p,
+.jumbotron p {
+  line-height: 36px;
+  font-size: 1.5em;
+  color: #666; }
+
+h1.page-title,
+h1.main-head {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 900; }
+
+/* ==========================================================================
+NAVIGATION
+========================================================================== */
+nav {
+  background: transparent; }
+  nav .container {
+    height: 100%;
+    display: flex; }
+    nav .container .row {
+      width: 100%; }
+      nav .container .row .two {
+        display: flex; }
+        nav .container .row .two ul li {
+          display: inline-block; }
+          nav .container .row .two ul li a {
+            color: #50BEC8; }
+
+/* ==========================================================================
+JUMBOTRON
+========================================================================== */
+.jumbotron {
+  padding: 0;
+  background: transparent; }
+  .jumbotron .container {
+    height: 100%;
+    display: flex; }
+
+/* ==========================================================================
+GALLERY
+========================================================================== */
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /* ==========================================================================
+  Headings and Paragraphs
+  ========================================================================== */
+  h1.page-title {
+    font-size: 2em; }
+
+  h1.main-head {
+    font-size: 3em; }
+
+  /* ==========================================================================
+  Links
+  ========================================================================== */
+  a {
+    font-size: 1.3em; }
+
+  /* ==========================================================================
+  CONTAINER
+  ========================================================================== */
+  .container {
+    width: 90%; }
+
+  /* ==========================================================================
+  NAVIGATION
+  ========================================================================== */
+  nav {
+    height: 8%; }
+    nav li {
+      margin-left: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd; }
+
+  /* ==========================================================================
+  JUMBOTRON
+  ========================================================================== */
+  .jumbotron {
+    height: 50%; } }
 /* Large Devices, Wide Screens */
 
 /*# sourceMappingURL=style.css.map */
