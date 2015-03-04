@@ -32,7 +32,7 @@ Variables
 /* ==========================================================================
 Mixins and Extends
 ========================================================================== */
-.align-center, nav .container {
+.align-center, nav .container, #skills .row, #contact .all, #contact .two a {
   -ms-align-items: center;
   align-items: center; }
 
@@ -40,7 +40,7 @@ Mixins and Extends
   -ms-align-items: flex-end;
   align-items: flex-end; }
 
-.justify-content {
+.justify-content, #contact .two a {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -67,23 +67,45 @@ Mixins and Extends
 
 html,
 body {
-  height: 100%;
-  font-family: "museo-sans",sans-serif; }
+  font-family: 'museo-sans',sans-serif;
+  height: 100%; }
 
 /* ==========================================================================
 Headings and Paragraphs
 ========================================================================== */
 p,
 .jumbotron p {
-  line-height: 36px;
   font-size: 1.5em;
-  color: #666; }
+  font-weight: 100;
+  line-height: 36px;
+  color: #333; }
 
 h1.page-title,
 h1.main-head {
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 900; }
+  font-weight: 900;
+  text-transform: uppercase; }
+
+h1.main-head {
+  color: #333; }
+
+h1.page-title {
+  color: #fff;
+  background: #000; }
+
+h2.under-head {
+  font-size: 1.5em;
+  font-weight: 300; }
+
+h3 {
+  font-weight: 500; }
+
+/* ==========================================================================
+List Items
+========================================================================== */
+section ul {
+  display: block; }
+  section ul li {
+    font-weight: 100; }
 
 /* ==========================================================================
 NAVIGATION
@@ -91,8 +113,8 @@ NAVIGATION
 nav {
   background: transparent; }
   nav .container {
-    height: 100%;
-    display: flex; }
+    display: flex;
+    height: 100%; }
     nav .container .row {
       width: 100%; }
       nav .container .row .two {
@@ -100,7 +122,7 @@ nav {
         nav .container .row .two ul li {
           display: inline-block; }
           nav .container .row .two ul li a {
-            color: #50BEC8; }
+            color: #50bec8; }
 
 /* ==========================================================================
 JUMBOTRON
@@ -109,12 +131,56 @@ JUMBOTRON
   padding: 0;
   background: transparent; }
   .jumbotron .container {
-    height: 100%;
-    display: flex; }
+    display: flex;
+    height: 100%; }
 
 /* ==========================================================================
-GALLERY
+SKILLS
 ========================================================================== */
+#skills .container,
+#skills .row {
+  height: 100%; }
+#skills .row {
+  display: flex; }
+  #skills .row li {
+    font-weight: 500; }
+
+/* ==========================================================================
+CONTACT
+========================================================================== */
+#contact {
+  min-height: 5%; }
+  #contact .container,
+  #contact .row,
+  #contact .all {
+    height: 100%; }
+  #contact .all {
+    display: flex; }
+  #contact .one {
+    color: #fff;
+    background: #333; }
+    #contact .one h1,
+    #contact .one p,
+    #contact .one a {
+      color: #fff; }
+    #contact .one a {
+      transition: all 200ms ease; }
+      #contact .one a:hover {
+        text-decoration: none;
+        background: #9B6555;
+        border: none; }
+  #contact .two {
+    background: #32cdfb; }
+    #contact .two a {
+      display: flex;
+      width: 100%;
+      height: 100%; }
+      #contact .two a:hover {
+        text-decoration: none; }
+      #contact .two a .fa {
+        font-size: 3em;
+        color: #fff; }
+
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
@@ -124,10 +190,18 @@ GALLERY
   Headings and Paragraphs
   ========================================================================== */
   h1.page-title {
-    font-size: 2em; }
+    font-size: 2em;
+    width: 25%;
+    padding: 10px; }
 
   h1.main-head {
     font-size: 3em; }
+
+  /* ==========================================================================
+  List Items
+  ========================================================================== */
+  section ul li {
+    font-size: .9em; }
 
   /* ==========================================================================
   Links
@@ -145,7 +219,7 @@ GALLERY
   NAVIGATION
   ========================================================================== */
   nav {
-    height: 8%; }
+    height: 12%; }
     nav li {
       margin-left: 20px;
       padding-bottom: 15px;
@@ -155,7 +229,35 @@ GALLERY
   JUMBOTRON
   ========================================================================== */
   .jumbotron {
-    height: 50%; } }
+    height: 50%; }
+
+    /* ==========================================================================
+	SKILLS
+	========================================================================== */
+  #skills {
+    height: 100%; }
+    #skills li {
+      font-size: 1.3em; }
+
+  /* ==========================================================================
+  CONTACT
+  ========================================================================== */
+  #contact {
+    height: 60%; }
+    #contact .one {
+      padding: 80px; }
+      #contact .one li {
+        line-height: 2em; }
+      #contact .one .button1 {
+        color: #fff;
+        border-radius: 0px;
+        border: 3px solid #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px; }
+    #contact .two {
+      padding: 0; } }
 /* Large Devices, Wide Screens */
 
 /*# sourceMappingURL=style.css.map */
